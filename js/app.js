@@ -1,6 +1,8 @@
+const url = window.location.href
+let swLocation = url.includes('localhost') ? '/sw.js' : '/twittor/sw.js'
 
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register(swLocation)
 }
 
 // Referencias de jQuery
